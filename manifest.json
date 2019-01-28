@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "微博短链防劫持",
+  "version": "1.0.0",
+  "description": "微博短链防劫持,将http://t.cn跳转https://t.cn,来尽可能避免被运营商劫持",
+  "icons": {
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_title": "微博短链防劫持"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "update_url": "http://upext.chrome.360.cn/intf.php?method=ExtUpdate.query",
+  "homepage_url": "https://github.com/jmjlbmn"
+}
