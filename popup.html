@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            width: 120px;
+            padding: 12px;
+        }
+
+        span.txt {
+            display: inline-block;
+            width: 50px;
+            line-height: 22px;
+            font-size: 16px;
+        }
+
+        .switch {
+            width: 40px;
+            height: 20px;
+            border-radius: 30px;
+            overflow: hidden;
+            vertical-align: middle;
+            position: relative;
+            display: inline-block;
+            background: #ccc;
+            box-shadow: 0 0 1px #36a6d4;
+        }
+
+        .switch input {
+            visibility: hidden;
+        }
+
+        .switch span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            background: #fff;
+            width: 50%;
+            height: 100%;
+            transition: all linear 0.2s;
+        }
+
+        .switch span::before {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            content: "";
+            width: 200%;
+            height: 100%;
+            border-radius: 30px;
+            background: #36a6d4;
+        }
+
+        .switch span::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #fff;
+        }
+
+        .switch input:checked+span {
+            transform: translateX(100%);
+        }
+    </style>
+    <title>微博助手</title>
+</head>
+
+<body>
+    <span class="txt" title="将http跳转https,可以解决部分情况下被劫持到慕明奇妙网站的问题">https</span>
+    <label class="switch" title="将http跳转https,可以解决部分情况下被劫持到慕明奇妙网站的问题">
+        <input type="checkbox" id="https">
+        <span></span>
+    </label>
+    <br>
+    <br>
+    <span class="txt" title="自动跳转微博的非白名单地址">跳 转</span>
+    <label class="switch" title="自动跳转微博的非白名单地址">
+        <input type="checkbox" id="auto">
+        <span></span>
+    </label>
+    <script type="text/javascript" src="js/popup.js"></script>
+</body>
+
+</html>
